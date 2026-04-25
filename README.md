@@ -26,3 +26,34 @@ Projekt jest podzielony na następujące etapy merytoryczne :
 
 ## 🚀 Technologie i Metodyka
 Projekt realizowany jest w języku **Python** z wykorzystaniem biblioteki `lifelines`.
+
+## 🚀 Uruchomienie projektu (Środowisko Wirtualne)
+
+Aby zapewnić zgodność wersji pakietów w zespole, zalecamy pracę w środowisku wirtualnym.
+
+### Krok 1: Utworzenie środowiska wirtualnego
+```bash
+python -m venv .venv
+```
+
+### Krok 2: Aktywacja środowiska
+* **Windows (Command Prompt / PowerShell)**:
+  ```bash
+  .venv\Scripts\activate
+  ```
+* **macOS / Linux**:
+  ```bash
+  source .venv/bin/activate
+  ```
+
+### Krok 3: Instalacja pakietów
+Upewnij się, że środowisko jest aktywne (w terminalu pojawi się `(.venv)`), a następnie zainstaluj wymagane biblioteki:
+```bash
+pip install -r requirements.txt
+```
+
+### Krok 4: Dodanie środowiska do Jupyter Notebook
+Aby korzystać z nowego środowiska w notatnikach Jupyter, dodaj odpowiedni kernel:
+```bash
+python -m ipykernel install --user --name=act_projekt_env --display-name="Python (ACT Projekt)"
+```
