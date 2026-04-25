@@ -3,12 +3,29 @@
 Projekt realizowany w ramach przedmiotu **Analiza Czasu Trwania**. Celem jest zbadanie czynników wpływających na czas przeżycia pacjentów z niewydolnością serca przy użyciu metod statystycznych: od estymatorów nieparametrycznych po zaawansowane modele regresji.
 
 ## 📊 O zbiorze danych
-Wykorzystany zbiór danych to [Heart Failure Clinical Records](https://archive.ics.uci.edu/dataset/519/heart+failure+clinical+records) pochodzący z repozytorium UCI Machine Learning.
+Wykorzystany zbiór danych to [Heart Failure Clinical Records](https://archive.ics.uci.edu/dataset/519/heart+failure+clinical+records) pochodzący z repozytorium UCI Machine Learning. Zbiór zawiera dane kliniczne 299 pacjentów z niewydolnością serca.
+
+### Charakterystyka zmiennych
+
+| Zmienna | Opis merytoryczny | Jednostka / Wartości |
+| :--- | :--- | :--- |
+| **age** | Wiek pacjenta | lata |
+| **anaemia** | Niedokrwistość (anemia) | 0: brak, 1: występuje |
+| **creatinine_phosphokinase** | Poziom kinazy fosfokreatynowej (CPK) | mcg/L |
+| **diabetes** | Cukrzyca | 0: brak, 1: występuje |
+| **ejection_fraction** | Frakcja wyrzutowa (EF) | % |
+| **high_blood_pressure** | Nadciśnienie tętnicze | 0: brak, 1: występuje |
+| **platelets** | Liczba płytek krwi (trombocytów) | kilopłytki/mL |
+| **serum_creatinine** | Poziom kreatyniny w surowicy | mg/dL |
+| **serum_sodium** | Poziom sodu w surowicy | mEq/L |
+| **sex** | Płeć | 0: Kobieta, 1: Mężczyzna |
+| **smoking** | Palenie tytoniu | 0: niepali, 1: pali |
+| **time** | Okres obserwacji | dni |
+| **DEATH_EVENT** | Status przeżycia (Zmienna celu) | 0: żyje, 1: zgon |
 
 * **Typ modelu**: Model pojedynczych epizodów – jeden stan wyjścia i jeden stan przeznaczenia.
-* **Zmienna celu (`time`)**: Czas oczekiwania na wystąpienie zdarzenia (zgonu) wyrażony w dniach.
-* **Zdarzenie (`DEATH_EVENT`)**: Wystąpienie zgonu (1) lub cenzurowanie prawostronne (0).
-* **Główne zmienne kliniczne**: wiek, frakcja wyrzutowa (ejection fraction), poziom kreatyniny w surowicy, nadciśnienie tętnicze, palenie tytoniu.
+* **Cenzurowanie**: W zbiorze występuje cenzurowanie prawostronne (dla pacjentów, którzy przeżyli okres obserwacji).
+
 
 ## 🛠️ Struktura Projektu (Zgodnie z wymaganiami)
 Projekt jest podzielony na następujące etapy merytoryczne :
